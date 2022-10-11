@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/settings_menu"
+        android:title="Configuraciones"
+        android:icon="@drawable/ic_settings"
+        app:showAsAction="never">
+
+    </item>
+    <item
+        android:id="@+id/help_menu"
+        android:title="Ayuda"
+        android:icon="@drawable/ic_help"
+        app:showAsAction="always">
+
+    </item>
+    <item
+        android:id="@+id/home_menu"
+        android:title="Inicio"
+        android:icon="@drawable/ic_home"
+        app:showAsAction="always">
+
+    </item>
+
+    <item
+        android:id="@+id/fav_menu"
+        android:title="Favorito"
+        android:icon="@drawable/ic_favorite"
+        app:showAsAction="never">
+
+    </item>
+    <item
+        android:id="@+id/money_menu"
+        android:title="Money Pocket"
+        android:icon="@drawable/ic_money"
+        app:showAsAction="always">
+
+    </item>
+    <item
+        android:id="@+id/email_menu"
+        android:title="Email"
+        android:icon="@drawable/ic_email"
+        app:showAsAction="ifRoom|collapseActionView">
+
+    </item>
+</menu>
