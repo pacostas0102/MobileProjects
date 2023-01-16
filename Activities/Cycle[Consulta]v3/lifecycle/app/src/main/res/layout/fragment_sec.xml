@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/red_100"
+    tools:context=".SecFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@id/button"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Android Architectures"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textColor="@color/green_700"
+                android:textStyle="bold"
+                android:layout_margin="16dp"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Model View Presenter (MVP)"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="El patrón MVP permite separar la capa de presentación de la lógica para que todo sobre cómo funciona la interfaz de usuario sea independiente de cómo lo representamos en la pantalla. Idealmente, el patrón MVP lograría que la misma lógica pudiera tener vistas completamente diferentes e intercambiables."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MVP hace que las vistas sean independientes de nuestra fuente de datos. Dividimos la aplicación en al menos tres capas diferentes, lo que nos permite probarlas de forma independiente. Con MVP sacamos la mayor parte de la lógica de las actividades para poder probarla sin usar tests de instrumentación."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Como se puede implementar?"
+                android:textStyle="bold"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bueno, aquí es donde todo comienza a volverse más difuso. Hay muchas variaciones de MVP y todos pueden ajustar el patrón a sus necesidades y la forma en que se sienten más cómodos. Varía dependiendo básicamente del número de responsabilidades que delegamos al presentador."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No existe un forma estandar de implementarlo pero podemos visualizarlo por medio de un ejemplo:"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="El Modelo"
+                android:textColor="@color/green_700"
+                android:textStyle="bold"
+                android:padding="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="En una aplicación con una arquitectura por capas completa, este modelo solo sería la puerta de entrada a la capa de dominio o la lógica empresarial. En el presente código, se logra ver que se ha creado dos mocks de interactors con delays artificiales para simular peticiones a un servidor. En la siguiente imagen se visualiza una función simple que recibe el nombre de usuario y la contraseña, y realiza algunas validaciones. Esta es la estructura de uno de estos interactors:"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="214dp"
+                android:layout_margin="0dp"
+                android:padding="0dp"
+                android:src="@drawable/modelo"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The View"
+                android:textStyle="bold"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lo único que hará la vista es llamar a un método de presentador cada vez que haya una acción del usuario. Como el presentador debe ser independiente de la vista, utiliza una interfaz que debe ser implementada."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="214dp"
+                android:layout_margin="0dp"
+                android:padding="0dp"
+                android:src="@drawable/view1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="La vista usa el presentador para notificar sobre las interacciones del usuario. Así es como se usa:"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="214dp"
+                android:layout_margin="0dp"
+                android:padding="0dp"
+                android:src="@drawable/view2"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="El Presenter se define como una property para la actividad, y cuando se hace clic en el botón, llama a validateCredentials(), que notificará al Presenter."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="El Presenter"
+                android:textStyle="bold"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="El Presenter es responsable de actuar como intermediario entre la vista y el modelo. Recupera datos del modelo y los devuelve formateados a la vista."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="119dp"
+                android:layout_margin="0dp"
+                android:padding="0dp"
+                android:src="@drawable/presenter" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MVP tiene algunos riesgos, y lo más importante de lo que nos solemos olvidar es que el presentador está conectado a la vista para siempre. Y la vista es una actividad, lo que significa que:"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="* Podemos producir un leak de la actividad si ejecutamos tareas largas en segundo plano."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="* Podemos intentar actualizar una activity que ya haya muerto."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Para resolver esto, lo que hacemos es:"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="119dp"
+                android:layout_margin="0dp"
+                android:padding="0dp"
+                android:src="@drawable/presenter1" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="De esta forma evitamos llamar a una vista que esté en un estado inconsistente."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Model-View-View-Model (MVVM)"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Es el patrón de arquitectura de software reconocido en la industria que supera todos los inconvenientes de los patrones de diseño MVP y MVC . MVVM sugiere separar la lógica de presentación de datos (vistas o interfaz de usuario) de la parte lógica empresarial central de la aplicación."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Capas de la arquitectura"
+                android:textStyle="bold"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modelo: Esta capa es responsable de la abstracción de las fuentes de datos. Model y ViewModel trabajan juntos para obtener y guardar los datos."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vista: El propósito de esta capa es informar al ViewModel sobre la acción del usuario. Esta capa observa el ViewModel y no contiene ningún tipo de lógica de aplicación."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ViewModel: Expone esos flujos de datos que son relevantes para la Vista. Además, sirve como enlace entre el Modelo y la Vista."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="119dp"
+                android:layout_margin="0dp"
+                android:padding="0dp"
+                android:src="@drawable/mvvm" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Como se puede implementar?"
+                android:textStyle="bold"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hay 2 formas de implementar el patrón de diseño MVVM en proyectos de Android:"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1.Uso de la biblioteca DataBinding lanzada por Google."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2.Usando cualquier herramienta como RxJava para DataBinding."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Ventajas de esta arquitectura"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1.Mejorar la reutilización del código."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2.Todos los módulos son independientes, lo que mejora la capacidad de prueba de cada capa."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3.Hace que los archivos del proyecto sean fáciles de mantener y realizar cambios."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Desventajas de esta arquitectura"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1.Este patrón de diseño no es ideal para proyectos pequeños."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2.Si la lógica de vinculación de datos es demasiado compleja, la depuración de la aplicación será un poco más difícil."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Clean Architecture"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Las arquitecturas permmiten desacoplar diferentes unidades de tu código de manera organizada. De esta forma el código se hace más fácil de entender, modificar y testear."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pero las arquitecturas complejas, como la clean architecture pura, también pueden tener el efecto contrario: desacoplar el código también significa crear un montón de fronteras, modelos, transformaciones de datos que pueden terminar aumentando la curva de aprendizaje de tu código hasta un punto en el que no merezca la pena."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Capas de la arquitectura"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Presentación: Es la capa que interactúa con la interfaz de usuario."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Casos de Uso: Se trata principalmente de las acciones que el usuario puede desencadenar. Estos pueden ser acciones activas o acciones implícitas."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dominio: También conocida como la lógica de negocio. Estas son las reglas de tu negocio."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Datos: En esta capa se encuentra una definición abstracta de las diferentes fuentes de datos, y la forma en que se debe utilizar. Aquí se suele usar un patrón repositorio que, para una determinada solicitud, es capaz de decidir dónde encontrar la información."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Framework: Encapsula la interacción con el framework, por lo que el resto del código puede ser agnóstico y reutilizable."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Interaccion entre capas"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cuando se piensa en una forma lógica de interacción, se diría que la presentación utiliza la capa de casos de uso, que a su vez va a utilizar el dominio para acceder a la capa de datos, la que finalmente va a utilizar el framework para obtener acceso a los datos solicitados. A continuación, estos datos van de vuelta por la estructura de capas hasta llegar a la capa de presentación, que actualiza la interfaz de usuario."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="119dp"
+                android:layout_margin="0dp"
+                android:padding="0dp"
+                android:src="@drawable/clean" />
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</FrameLayout>

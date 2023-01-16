@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/green_100"
+    tools:context=".ThirdFragment">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@id/button"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Actividades Básicas del profesional"
+                android:textAlignment="center"
+                android:textColor="@color/green_700"
+                android:textStyle="bold"
+                android:layout_margin="16dp"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diseño de aplicaciones desde cero"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Colaboración con equipos de otras áreas"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ejecución de pruebas"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resolver incidencias de desarrollo"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mantenerse en constante actualización"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Conocimientos"
+                android:textAlignment="center"
+                android:textColor="@color/green_700"
+                android:textStyle="bold"
+                android:layout_margin="16dp"
+                android:padding="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Frameworks"
+                android:textStyle="bold"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Flutter, Ionic, React Native, Xamarin,
+                                      Appcelator Titanium, JQuery, Weex"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lenguajes de programación"
+                android:textStyle="bold"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Java, Kotlin, JavaScript, C#, PHP"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="APIS"
+                android:textStyle="bold"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="El sistema operativo Android provee de una API de framework para poder conectarlo con las aplicaciones basadas en él. Esta API tiene diversas versiones que básicamente se van actualizando, a esto se le llama nivel de API . Cada nivel ofrece una versión mejorada o actualizada de Android y el desarrollador debe tomarla en cuenta para crear una aplicación. Así puede estar seguro de qué características va a utilizar su app y qué debe hacer para mantener la aplicación vigente para niveles de la API menores."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Backend y Frontend"
+                android:textStyle="bold"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="El desarrollador Android debe conocer sobre bases de datos y lenguajes de programación para crear aplicaciones desde el backend. Al igual que un desarrollador full stack , el frontend para desarrolladores Android es muy importante. De hecho, los mobile developers tienen la característica de conocer todo el proceso de desarrollo desde la implementación de servidores, monitorear su ejecución hasta implementar las aplicaciones en la Play Store."
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Habilidades"
+                android:textAlignment="center"
+                android:textColor="@color/green_700"
+                android:textStyle="bold"
+                android:layout_margin="16dp"
+                android:padding="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trabajo en equipo, Adaptabilidad, Pensamiento lógico, Resolutivo"
+                android:textColor="@color/green_700"
+                android:padding="10dp"/>
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</FrameLayout>
