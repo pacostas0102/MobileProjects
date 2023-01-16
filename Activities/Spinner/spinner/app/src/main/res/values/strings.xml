@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Resistor Calculator</string>
+    <string name="resistor">resistor image</string>
+    <string name="title">Resistencia</string>
+    <string-array name="values">
+        <item> </item>
+        <item>0 Negro</item>
+        <item>1 Marron</item>
+        <item>2 Rojo</item>
+        <item>3 Naranja</item>
+        <item>4 Amarillo</item>
+        <item>5 Verde</item>
+        <item>6 Azul</item>
+        <item>7 Violeta</item>
+        <item>8 Gris</item>
+        <item>9 Blanco</item>
+    </string-array>
+
+    <string-array name="values2">
+        <item> </item>
+        <item>Negro</item>
+        <item>Marron</item>
+        <item>Rojo</item>
+        <item>Naranja</item>
+        <item>Amarillo</item>
+        <item>Verde</item>
+        <item>Azul</item>
+        <item>Violeta</item>
+        <item>Gris</item>
+        <item>Blanco</item>
+        <item>Dorado</item>
+        <item>Plateado</item>
+    </string-array>
+
+    <string-array name="values3">
+        <item> </item>
+        <item>Marron</item>
+        <item>Rojo</item>
+        <item>Dorado</item>
+        <item>Plateado</item>
+    </string-array>
+
+    <string name="banda1">Banda 1</string>
+    <string name="banda2">Banda 2</string>
+    <string name="banda3">Banda 3</string>
+    <string name="banda4">Tolerancia</string>
+    <string name="calcular">Calcular</string>
+    <string name="resultado">Resultado:</string>
+    <string name="tolerancia">Tolerancia:</string>
+</resources>
