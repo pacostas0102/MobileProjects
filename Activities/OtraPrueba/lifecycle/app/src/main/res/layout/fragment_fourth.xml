@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue_100"
+    tools:context=".SecFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@id/button"
+        tools:ignore="MissingConstraints">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SOLID PRINCIPLES"
+        android:textAlignment="center"
+        android:textColor="@color/green_700"
+        android:textStyle="bold"
+        android:layout_margin="16dp"
+        android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Son aquellos principios descritos por Robert C. Martin que son útiles y eficaces para seguir los principios del código limpio. Por lo tanto, si los desarrolladores de Android diseñan e implementan sus códigos sin usar principios de diseño estructurado como los principios SOLID, crearán problemas duraderos y la probabilidad de éxito de una aplicación disminuirá en el futuro."
+            android:textColor="@color/green_700"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5 Principios"
+            android:textColor="@color/green_700"
+            android:textStyle="bold"
+            android:layout_margin="16dp"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SOLID es un acrónimo de 5 principios de diseño de desarrollo de software orientado a objetos con el fin que los diseños sean más comprensibles, flexibles y mantenibles"
+            android:textColor="@color/green_700"
+            android:padding="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="S - Principio de responsabilidad única (conocido como SRP)"
+            android:textColor="@color/green_700"
+            android:textStyle="bold"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="El Principio de Responsabilidad Única (SRP) indica que cada clase debe tener una y sólo una responsabilidad. En otras palabras, si nuestra clase tiene más de una responsabilidad, debemos dividir las funcionalidades y responsabilidades en varias clases. Por lo tanto, esto hace que la clase sea más robusta."
+            android:textColor="@color/green_700"
+            android:padding="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="O — Principio abierto/cerrado"
+            android:textColor="@color/green_700"
+            android:textStyle="bold"
+            android:padding="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Establece que “las entidades de software tales como clases, componentes, módulos deben estar abiertos para la extensión, pero cerrados para la modificación”; es decir, dicha entidad puede permitir que se extienda su comportamiento sin modificar su código fuente; y se logra refiriéndose a la abstracción en conceptos orientados a objetos para dependencias como interfaces o clases abstractas, en lugar de usar clases concretas "
+            android:textColor="@color/green_700"
+            android:padding="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="L — Principio de sustitución de Liskov"
+            android:textColor="@color/green_700"
+            android:textStyle="bold"
+            android:padding="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Indica que las clases principales deben sustituirse fácilmente por sus clases secundarias sin cambiar el comportamiento del software. Significa que una subclase debe anular los métodos de una clase principal, lo que no rompe la funcionalidad de la clase principal. En resumen, en la implementación principal nunca debemos manejar la lógica."
+            android:textColor="@color/green_700"
+            android:padding="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I — Principio de segregación de interfaces"
+            android:textColor="@color/green_700"
+            android:textStyle="bold"
+            android:padding="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Indica que las clases que implementan interfaces no deben verse obligadas a implementar métodos que no utilizan. Este principio está relacionado con el hecho de que muchas interfaces específicas son mejores que una interfaz de propósito general."
+            android:textColor="@color/green_700"
+            android:padding="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="D — Principio de inversión de dependencia"
+            android:textColor="@color/green_700"
+            android:textStyle="bold"
+            android:padding="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sugiere que los módulos de alto nivel no deberían depender de los de bajo nivel. Entonces, ambos deberían depender de abstracciones. Además, la abstracción no debe depender de los detalles. Los detalles deben depender de las abstracciones."
+            android:textColor="@color/green_700"
+            android:padding="10dp"/>
+    </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</FrameLayout>

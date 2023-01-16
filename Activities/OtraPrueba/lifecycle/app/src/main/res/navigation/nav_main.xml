@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.sigmotoa.lifecycle.NavFragment"
+        android:label="fragment_nav"
+        tools:layout="@layout/fragment_nav" >
+        <action
+            android:id="@+id/action_homeFragment_to_shopFragment"
+            app:destination="@id/shopFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_fourthFragment"
+            app:destination="@id/SOLIDprinciples" />
+    </fragment>
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="com.sigmotoa.lifecycle.SecFragment"
+        android:label="fragment_sec"
+        tools:layout="@layout/fragment_sec" >
+        <action
+            android:id="@+id/action_shopFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.sigmotoa.lifecycle.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" >
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SOLIDprinciples"
+        android:name="com.sigmotoa.lifecycle.FourthFragment"
+        android:label="fragment_fourth"
+        tools:layout="@layout/fragment_fourth">
+        <action
+            android:id="@+id/action_fourthFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
